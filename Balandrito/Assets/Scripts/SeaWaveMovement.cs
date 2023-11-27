@@ -2,27 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Parallax : MonoBehaviour
+public class SeaWaveMovement : MonoBehaviour
 {
-    // Velocidad del fondo, con 0.5 igualaríamos a la de la cámara
-    [Range(0f, 0.5f)]
-    public float speedFactor = 0.066f;
+    // Array con cada una de las velocidades que tendrán las olas
+    // Estos valores irán variando por tiempo, de forma random; y por escena
+    // Los valores positivos indicarán que las olas se mueven a la derecha, y
+    // los valores negativos que se mueven a la izquierda
+    [Range(-2f, 2f)]
+    public float[] seaWaveVelocity;
+    // Distancia entre cada ola
+    public float distanceBetweenSeaWave = 0.1f;
+    // Offset de la primera ola con respecto a la esquina inferior izquierda
+    public float offsetFirstSeaWave = 0;
     // Posición para control del offset de la textura
     private Vector2 pos = Vector2.zero;
+
     // Referencia al main camera
     private Camera cam;
     // Posicion anterior de la cámara
-    private Vector2 camOldPos;
+        // private Vector2 camOldPos;
     // Referencia al renderer del background para acceder a su material
     private Renderer rend;
+
 
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main;
 
-        // Inicializamos la posición anterior de la cámara con la posición actual
-        camOldPos = cam.transform.position;
+
         // Recuperamos la referencia al componente renderer
         rend = GetComponent<Renderer>();
 
@@ -47,20 +55,6 @@ public class Parallax : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Calculamos el desplazamiento de la cámara respecto al ciclo anterior
-        // No aplicamos variación en y, luego lo mantenemos a 0
-        Vector2 camVar = new Vector2(cam.transform.position.x - camOldPos.x, 0);
 
-        // Modificamos el offset que se aplicará a la textura
-        // Lo multiplicamos por speedFactor para modificar su desplazamiento respecto a la cámara
-        pos.Set(pos.x + (camVar.x * speedFactor),
-                pos.y + (camVar.y * speedFactor));
-
-        // Aplicamos el offset a la textura principal
-        rend.material.SetTextureOffset("_MainTex", pos);
-
-        // Actualizamos posición de la cámara para el siguiente ciclo
-        camOldPos = cam.transform.position;
     }
 }
-
