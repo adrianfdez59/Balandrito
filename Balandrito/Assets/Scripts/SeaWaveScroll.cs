@@ -26,7 +26,7 @@ public class SeaWaveScroll : MonoBehaviour
         // Recuperamos la referencia al componente Renderer
         meshRend = GetComponent<MeshRenderer>();
 
-        pos = transform.position;
+        // pos = transform.position;
     }
 
     // Update is called once per frame
@@ -36,8 +36,9 @@ public class SeaWaveScroll : MonoBehaviour
         meshRend.material.mainTextureOffset += new Vector2( seaWaveScrollVelocityX * Time.deltaTime, 0 );
 
         // Desplazamos en Y la miniola, siguiendo un movimiento sinusoidal
-        pos.y += Mathf.Sin(seaWaveMoveY * Time.deltaTime);
+        // pos.y += seaWaveMoveY * Mathf.Sin(Time.deltaTime);
+        // pos.y += Mathf.Sin(Time.deltaTime);
 
-        transform.position = new Vector3(pos.x, pos.y, pos.z);
+        // transform.Translate(pos.x, pos.y, pos.z);
     }
 }
