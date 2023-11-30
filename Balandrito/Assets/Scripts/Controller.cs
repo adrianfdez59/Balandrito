@@ -11,7 +11,7 @@ public class Controller : MonoBehaviour
     public LayerMask[] capas;
     
 
-    // registro de capas
+    // registro de capas (nombradas de 0 a 4)
     private int capaActual = 0;
 
     // lista de posiciones correspondientes a cada capa
@@ -59,7 +59,7 @@ public class Controller : MonoBehaviour
         // Limitar la rotación a un máximo de 90 grados
         float nuevaRotacion = Mathf.Clamp(rb.rotation + torque * Time.deltaTime, -60f, 60f);
 
-        // Aplicar la rotación al triángulo
+        // Aplicar la rotación al barco
         rb.SetRotation(nuevaRotacion);
         rb.AddTorque(torque * Time.deltaTime);
     }
