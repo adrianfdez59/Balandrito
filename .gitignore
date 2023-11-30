@@ -39,6 +39,6 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 Thumbs.db
-*.vsidx
-*.log
+*.unity
+*.bin
 *.log
