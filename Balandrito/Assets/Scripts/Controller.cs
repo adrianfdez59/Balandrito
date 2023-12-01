@@ -63,6 +63,18 @@ public class Controller : MonoBehaviour
         rb.SetRotation(nuevaRotacion);
         rb.AddTorque(torque * Time.deltaTime);
     }
+    void OnTriggerStay(Collider other)
+    {
+        // Verifica si el objeto con el que colisiona tiene el tag "wave"
+        if (other.CompareTag("wave"))
+        {
+            // Calcula el desplazamiento en la dirección derecha
+            float desplazamiento = fuerzaTorque * Time.deltaTime;
+
+            // Mueve este objeto a la derecha
+            transform.Translate(new Vector3(desplazamiento, 0f, 0f));
+        }
+    }
 
 
     void CambiarCapa(bool haciaAdelante)
