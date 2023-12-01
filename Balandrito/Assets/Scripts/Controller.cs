@@ -6,8 +6,10 @@ public class Controller : MonoBehaviour
 {
     //fuerza torsion ajustabe en el editor
     public float fuerzaTorque = 3f;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     //lista de capas
+    public float velocidadInicial = 5f;
+    public float impulsoAdicional = 10f;
     public LayerMask[] capas;
     
 
@@ -23,8 +25,8 @@ public class Controller : MonoBehaviour
         // Obtenemos el componente Rigidbody2D
         rb = GetComponent<Rigidbody2D>();
         transform.position = new Vector3(-6.834f, -2.04f, 0);
+        rb.velocity = new Vector2(velocidadInicial, 0f);
 
-       
 
         // Inicializamos la capa y posición inicial
         CambiarCapa(false);
@@ -34,6 +36,12 @@ public class Controller : MonoBehaviour
     void Update()
     {
 
+        // Verificar si se presiona la barra espaciadora
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            // Aplicar impulso adicional hacia la derecha cuando se presiona la barra espaciadora
+            rb.velocity += new Vector2(impulsoAdicional, 0f);
+        }
 
 
         // Al pulsar la tecla W, cambiar a la siguiente capa
