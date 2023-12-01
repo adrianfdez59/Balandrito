@@ -5,6 +5,7 @@
 [Bb]uild/
 [Ll]ibrary/
 [Ll]ocal[Cc]ache/
+[Ll]ogs/
 [Oo]bj/
 [Tt]emp/
 [Uu]nityGenerated/
@@ -39,8 +40,6 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 Thumbs.db
-*.unity
 *.bin
 *.log
-*.bin
 *.meta
