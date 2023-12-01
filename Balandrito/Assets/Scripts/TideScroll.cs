@@ -8,21 +8,21 @@ public class TideScroll : MonoBehaviour
     // Estos valores irán variando por tiempo, de forma random; y por escena
     // Los valores positivos indicarán que las olas se mueven a la derecha, y
     // los valores negativos que se mueven a la izquierda
-    [Range(-0.1f, 0.1f)]
+    [Range(-0.2f, 0.2f)]
     public float tideScrollVelocityX;
     // Desplazamiento de la miniola en Y
     public float tideMoveY;
 
-    private Vector3 pos = Vector3.zero;
+    //private Vector3 pos = Vector3.zero;
 
     // Referencia al MeshRenderer del mar para acceder a su material
-    private SpriteRenderer meshRend;
+    private MeshRenderer meshRend;
 
     // Start is called before the first frame update
     void Start()
     {
         // Recuperamos la referencia al componente Renderer
-        meshRend = GetComponent<SpriteRenderer>();
+        meshRend = GetComponent<MeshRenderer>();
 
         // pos = transform.position;
     }
