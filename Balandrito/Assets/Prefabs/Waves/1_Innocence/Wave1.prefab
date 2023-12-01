@@ -126,6 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4144514272482317363}
   - component: {fileID: 1455131368774342373}
+  - component: {fileID: 3402550905380863208}
   m_Layer: 0
   m_Name: Wave1
   m_TagString: Untagged
@@ -142,9 +143,9 @@ Transform:
   m_GameObject: {fileID: 6822791161418127566}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.93, y: -3.35, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4617048604623982183}
   m_Father: {fileID: 0}
@@ -178,8 +179,8 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -206,3 +207,22 @@ PolygonCollider2D:
       - {x: 0.67845356, y: -0.6393163}
       - {x: 1.9288206, y: -0.6365183}
   m_UseDelaunayMesh: 0
+--- !u!253 &3402550905380863208
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6822791161418127566}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SurfaceLevel: 1
+  m_Density: 4
+  m_LinearDrag: 5
+  m_AngularDrag: 5
+  m_FlowAngle: 60
+  m_FlowMagnitude: 40
+  m_FlowVariation: 0
