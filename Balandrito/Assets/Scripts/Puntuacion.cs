@@ -25,9 +25,9 @@ public class Puntuacion : MonoBehaviour
             tiempoTranscurrido += Time.deltaTime;
 
             // Incrementa los puntos cada segundo
-            if (tiempoTranscurrido >= 1f)
+            if (tiempoTranscurrido >= 0.2f)
             {
-                puntos++;
+                puntos += 100;
                 tiempoTranscurrido = 0f;
                 Debug.Log("Puntos: " + puntos);
             }
