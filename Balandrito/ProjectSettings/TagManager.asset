@@ -40,6 +40,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 816281635
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Boat
+    uniqueID: 783627301
+    locked: 0
+  - name: Tides
+    uniqueID: 1551096403
+    locked: 0
+  - name: Waves
+    uniqueID: 1044079471
     locked: 0
