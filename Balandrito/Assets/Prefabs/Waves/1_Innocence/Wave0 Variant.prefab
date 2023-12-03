@@ -70,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1193000125
+  m_SortingLayerID: 834246563
   m_SortingLayer: 4
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 32fab4cc630b19e4a9e35d88135acd69, type: 3}
@@ -192,7 +192,7 @@ BuoyancyEffector2D:
   m_Density: 4
   m_LinearDrag: 5
   m_AngularDrag: 5
-  m_FlowAngle: 120
+  m_FlowAngle: 60
   m_FlowMagnitude: 40
   m_FlowVariation: 0
 --- !u!1 &7939391873054396859

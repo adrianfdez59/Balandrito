@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6033800018253157812}
   m_Layer: 8
   m_Name: SeaSection2
-  m_TagString: Untagged
+  m_TagString: sea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,8 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16bd376c4aaaca42bd0bfe957438387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sectionNumber: 2
-  offsetX: 3
 --- !u!1001 &7127407788646574433
 PrefabInstance:
   m_ObjectHideFlags: 0

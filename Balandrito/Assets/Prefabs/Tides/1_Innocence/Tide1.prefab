@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4537679245216071977}
   m_Layer: 6
   m_Name: Tide1
-  m_TagString: Untagged
+  m_TagString: sea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,12 +126,12 @@ BuoyancyEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 64
-  m_SurfaceLevel: 1.05
+  m_SurfaceLevel: 0.5
   m_Density: 4
   m_LinearDrag: 15
   m_AngularDrag: 5
   m_FlowAngle: 180
-  m_FlowMagnitude: 15
+  m_FlowMagnitude: 2
   m_FlowVariation: 0
 --- !u!1 &6832440167879718267
 GameObject:
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 8431335509547467897}
   m_Layer: 6
   m_Name: Model
-  m_TagString: Untagged
+  m_TagString: sea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 5898217441389531029}
   m_Layer: 6
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: sea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,7 +235,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1935537437
+  m_SortingLayerID: -1221422619
   m_SortingLayer: 5
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 7277a0bb2e315dd42ae00b2f79f49b91, type: 3}

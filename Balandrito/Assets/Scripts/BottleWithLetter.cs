@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
 using UnityEngine;
-using static System.Collections.Specialized.BitVector32;
 
 public class BottleWithLetter : MonoBehaviour
 {

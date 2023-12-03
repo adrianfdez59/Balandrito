@@ -37,7 +37,7 @@ public class Health : MonoBehaviour
             {
                 // Mantener la misma posición en el eje Y - 2 de altura 
                 Vector3 nuevaPosicion = transform.position;
-                nuevaPosicion.y = posicionObjetoAseguir.y - 2.5f;
+                nuevaPosicion.y = posicionObjetoAseguir.y - 1f;
 
                 // Asignar la nueva posición al objeto que tiene este script
                 transform.position = nuevaPosicion;

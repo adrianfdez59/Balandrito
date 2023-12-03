@@ -7,6 +7,8 @@ TagManager:
   - wave
   - suelo
   - sea
+  - Bottle
+  - Rock
   layers:
   - Default
   - TransparentFX
@@ -14,11 +16,11 @@ TagManager:
   - 
   - Water
   - UI
-  - Mar 1
-  - Mar 2
-  - Mar 3
-  - Mar 4
-  - Mar 5
+  - Section0
+  - Section1
+  - Section2
+  - Section3
+  - Section4
   - 
   - 
   - 
@@ -47,12 +49,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Boat
-    uniqueID: 783627301
+  - name: Section4
+    uniqueID: 3963090719
     locked: 0
-  - name: Tides
-    uniqueID: 1551096403
+  - name: Section3
+    uniqueID: 2144107245
     locked: 0
-  - name: Waves
-    uniqueID: 1044079471
+  - name: Section2
+    uniqueID: 1246580337
+    locked: 0
+  - name: Section1
+    uniqueID: 834246563
+    locked: 0
+  - name: Section0
+    uniqueID: 3073544677
+    locked: 0
+  - name: Video
+    uniqueID: 2145466141
     locked: 0
