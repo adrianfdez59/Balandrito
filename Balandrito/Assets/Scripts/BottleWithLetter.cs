@@ -36,23 +36,23 @@ public class BottleWithLetter : MonoBehaviour
         {
             case 0:
                 gameObject.layer = LayerMask.NameToLayer("Section0");
-                //bottle.gameObject.GetComponentInChildren<Renderer>().sortingLayerID = SortingLayer.NameToID("Section0");
+                gameObject.GetComponentInChildren<Renderer>().sortingLayerID = SortingLayer.NameToID("Section0");
                 break;
             case 1:
                 gameObject.layer = LayerMask.NameToLayer("Section1");
-                //gameObject.GetComponentInChildren<Renderer>().sortingLayerID = SortingLayer.NameToID("Section1");
+                gameObject.GetComponentInChildren<Renderer>().sortingLayerID = SortingLayer.NameToID("Section1");
                 break;
             case 2:
                 gameObject.layer = LayerMask.NameToLayer("Section2");
-                //gameObject.GetComponentInChildren<Renderer>().sortingLayerID = SortingLayer.NameToID("Section2");
+                gameObject.GetComponentInChildren<Renderer>().sortingLayerID = SortingLayer.NameToID("Section2");
                 break;
             case 3:
                 gameObject.layer = LayerMask.NameToLayer("Section3");
-                //gameObject.GetComponentInChildren<Renderer>().sortingLayerID = SortingLayer.NameToID("Section3");
+                gameObject.GetComponentInChildren<Renderer>().sortingLayerID = SortingLayer.NameToID("Section3");
                 break;
             case 4:
                 gameObject.layer = LayerMask.NameToLayer("Section4");
-                //gameObject.GetComponentInChildren<Renderer>().sortingLayerID = SortingLayer.NameToID("Section4");
+                gameObject.GetComponentInChildren<Renderer>().sortingLayerID = SortingLayer.NameToID("Section4");
                 break;
             default:
                 break;

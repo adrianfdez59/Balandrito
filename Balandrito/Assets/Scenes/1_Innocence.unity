@@ -522,7 +522,7 @@ GameObject:
   - component: {fileID: 880689930}
   - component: {fileID: 880689929}
   m_Layer: 0
-  m_Name: BACKGROUND_INFANCIA_2
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -833,6 +833,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SeaSection4
       objectReference: {fileID: 0}
+    - target: {fileID: 5591236990775339335, guid: b956822f696a9814fa57f911b71477be, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8912241233136410973, guid: b956822f696a9814fa57f911b71477be, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1020,6 +1024,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 667311293424236443, guid: 55cdf99c34c49954c8c6ccf7f82f96bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493780855680016319, guid: 55cdf99c34c49954c8c6ccf7f82f96bd, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6036524214554695231, guid: 55cdf99c34c49954c8c6ccf7f82f96bd, type: 3}
@@ -1216,6 +1224,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5419546279212835035, guid: 13dbe27e92e817544ab0b0db3e2a71dd, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419546279212835035, guid: 13dbe27e92e817544ab0b0db3e2a71dd, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1136228369
+      objectReference: {fileID: 0}
     - target: {fileID: 7956060445489916372, guid: 13dbe27e92e817544ab0b0db3e2a71dd, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -1288,7 +1304,7 @@ SceneRoots:
   - {fileID: 1111672232}
   - {fileID: 189364646}
   - {fileID: 880689928}
+  - {fileID: 662767686}
   - {fileID: 1332749513}
   - {fileID: 351619822}
   - {fileID: 7982740497391777720}
-  - {fileID: 662767686}
