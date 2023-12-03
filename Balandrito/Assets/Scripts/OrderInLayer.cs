@@ -4,43 +4,42 @@ using UnityEngine;
 
 public class OrderInLayer : MonoBehaviour
 {
-    public KeyCode decreaseOrderKey = KeyCode.W;
-    public KeyCode increaseOrderKey = KeyCode.S;
-    private SpriteRenderer spriteRenderer;
-    private int currentOrder = 5; // Inicia en 5, según tu descripción
 
-    void Start()
-    {
-       
-        spriteRenderer = GetComponent<SpriteRenderer>();
-
-        // Verificar si se encontró el componente SpriteRenderer
-        if (spriteRenderer == null)
-        {
-            
-            enabled = false; // Desactivar el script si no se encuentra el componente SpriteRenderer
-        }
-    }
+    public KeyCode teclaSubir = KeyCode.W;
+    public KeyCode teclaBajar = KeyCode.S;
+    public int[] capas;
+    private int indiceCapaActual = 5;
 
     void Update()
     {
-        //  tecla 'W'
-        if (Input.GetKeyDown(decreaseOrderKey) && currentOrder > 0)
+        if (Input.GetKeyDown(teclaSubir))
         {
-            ChangeOrderInLayer(-1);
+            CambiarCapa(true);
         }
-
-        // tecla 'S'
-        if (Input.GetKeyDown(increaseOrderKey) && currentOrder < 5)
+        else if (Input.GetKeyDown(teclaBajar))
         {
-            ChangeOrderInLayer(1);
+            CambiarCapa(false);
         }
     }
 
-    void ChangeOrderInLayer(int orderChange)
+    void CambiarCapa(bool haciaArriba)
     {
-        // Cambiar el Order in Layer
-        currentOrder = Mathf.Clamp(currentOrder + orderChange, 0, 5);
-        spriteRenderer.sortingOrder = currentOrder;
+        int nuevoIndice;
+
+        if (haciaArriba)
+        {
+            nuevoIndice = (indiceCapaActual + 1) % capas.Length;
+        }
+        else
+        {
+            nuevoIndice = (indiceCapaActual - 1 + capas.Length) % capas.Length;
+        }
+
+        if (nuevoIndice != capas.Length - 1 && nuevoIndice != 0)
+        {
+            // Evitar cambiar directamente del primer al último layer
+            indiceCapaActual = nuevoIndice;
+            gameObject.layer =  capas[indiceCapaActual];
+        }
     }
 }

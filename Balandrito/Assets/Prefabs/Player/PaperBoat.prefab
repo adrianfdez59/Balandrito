@@ -42,7 +42,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8259819854100359998}
   - component: {fileID: 8339810943993361884}
-  - component: {fileID: 9098618164361353966}
   m_Layer: 0
   m_Name: PaperBoat
   m_TagString: Untagged
@@ -93,57 +92,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &9098618164361353966
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4101209704991342685}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.03830994, y: -0.33412063}
-      - {x: -2.4738123, y: 0.18612784}
-      - {x: -1.8229973, y: -1.0270277}
-      - {x: 0.039884627, y: -1.1749747}
-      - {x: 1.855523, y: -1.0069177}
-      - {x: 2.4746332, y: 0.19251889}
-  m_UseDelaunayMesh: 0
 --- !u!1 &7956060445489916372
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +163,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 783627301
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f4b2519ed95633249b11362f3545189a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

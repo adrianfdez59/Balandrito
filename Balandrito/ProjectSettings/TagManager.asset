@@ -6,6 +6,7 @@ TagManager:
   tags:
   - wave
   - suelo
+  - sea
   layers:
   - Default
   - TransparentFX
