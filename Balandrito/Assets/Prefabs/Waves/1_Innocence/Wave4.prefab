@@ -102,8 +102,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 783627301
-  m_SortingLayer: 1
+  m_SortingLayerID: -1935537437
+  m_SortingLayer: 5
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: b4892dfa1711c8845817d600e17b123b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -127,8 +127,7 @@ GameObject:
   - component: {fileID: 6439755576963660793}
   - component: {fileID: 3785934313571011599}
   - component: {fileID: 2482411881852597872}
-  - component: {fileID: 289561159452756041}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: Wave4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,17 +226,3 @@ BuoyancyEffector2D:
   m_FlowAngle: 135
   m_FlowMagnitude: 25
   m_FlowVariation: 0
---- !u!114 &289561159452756041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6815058226450241757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cc69d41c098d54795996e06d5b4936, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  elementType: 1
-  width: 8

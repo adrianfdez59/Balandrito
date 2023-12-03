@@ -8,7 +8,6 @@ public class LevelManager : MonoBehaviour
     // La primera posición es la marea más cercana, y la última la más lejana
     public float[] velocityXSections;
 
-
     // PATRÓN SINGLETON
     // Creamos una variable pública y estática
     public static LevelManager instance;

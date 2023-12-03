@@ -126,10 +126,9 @@ GameObject:
   m_Component:
   - component: {fileID: 934007094802356971}
   - component: {fileID: 6326341577060814570}
-  - component: {fileID: 6721659878482231898}
   m_Layer: 6
   m_Name: Rock3_Innocence
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,17 +201,3 @@ PolygonCollider2D:
       - {x: 1.5064466, y: -0.5277942}
       - {x: 1.7604253, y: 0.44659504}
   m_UseDelaunayMesh: 0
---- !u!114 &6721659878482231898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8322202126691492907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cc69d41c098d54795996e06d5b4936, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  elementType: 0
-  width: 6

@@ -127,7 +127,6 @@ GameObject:
   - component: {fileID: 4144514272482317363}
   - component: {fileID: 1455131368774342373}
   - component: {fileID: 3402550905380863208}
-  - component: {fileID: 6487103902434392959}
   m_Layer: 6
   m_Name: Wave0
   m_TagString: Untagged
@@ -225,20 +224,6 @@ BuoyancyEffector2D:
   m_Density: 4
   m_LinearDrag: 5
   m_AngularDrag: 5
-  m_FlowAngle: 60
+  m_FlowAngle: 120
   m_FlowMagnitude: 40
   m_FlowVariation: 0
---- !u!114 &6487103902434392959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6822791161418127566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cc69d41c098d54795996e06d5b4936, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  elementType: 1
-  width: 8
