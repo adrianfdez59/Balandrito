@@ -13,6 +13,9 @@ public class SeaSectionManager : MonoBehaviour
     //Número de plataformas generadas inicialmente
     public int initialPrewarm = 2;
 
+    // Array de secciones actuales
+    public SeaSection[] currentSections;
+
     // PATRÓN SINGLETON
     // Creamos una variable pública y estática
     public static SeaSectionManager instance;
@@ -36,7 +39,7 @@ public class SeaSectionManager : MonoBehaviour
         if (!sectionContainer) 
             sectionContainer = transform;
 
-        // Crearemos 5 secciones por cada initialPrewarm marcado
+        //Crearemos 5 secciones por cada initialPrewarm marcado
         for (int j = 0; j < initialPrewarm; j++)
         {
             for (int i = 0; i < sectionPrefabs.Length; i++)
@@ -45,6 +48,12 @@ public class SeaSectionManager : MonoBehaviour
                 SpawnSection(i);
             }
         }
+
+        //for (int i = 0; i < initialPrewarm; i++)
+        //{
+        //    // Debug.Log("Seccion: " + i.ToString() + " - Initial Prewarm: " + j.ToString());
+        //    SpawnSection(4);
+        //}
     }
 
     // Update is called once per frame
@@ -89,15 +98,15 @@ public class SeaSectionManager : MonoBehaviour
 
         // Sumamos las dos mitades de cada sección para colocar la nueva sección donde corresponde,
         // ya que pueden tener distinto tamaño
-        nextPositionOffset.x = sectionPrefabs[sectionNumber].halfWidth + newSection.halfWidth;
+        nextPositionOffset.x = currentSections[sectionNumber].halfWidth + newSection.halfWidth;
 
         // Instancia un objeto a través de un prefab, y la almacenamos como referencia la sección actual
-        sectionPrefabs[sectionNumber] = Instantiate(   newSection,
-                                                        sectionPrefabs[sectionNumber].transform.position + nextPositionOffset,
+        currentSections[sectionNumber] = Instantiate(   newSection,
+                                                        currentSections[sectionNumber].transform.position + nextPositionOffset,
                                                         Quaternion.identity,
                                                         sectionContainer
                                                     );
         // Cambiamos el nombre para evitar los (Clone)(Clone)...
-        sectionPrefabs[sectionNumber].name = "SeaSection" + sectionNumber.ToString();
+        currentSections[sectionNumber].name = "SeaSection" + sectionNumber.ToString();
     }
 }

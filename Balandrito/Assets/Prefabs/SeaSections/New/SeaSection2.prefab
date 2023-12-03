@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 299933142199708941}
   - component: {fileID: 6033800018253157812}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SeaSection2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,6 +58,18 @@ PrefabInstance:
     - target: {fileID: 1947974307863611735, guid: bf6dc387a046edd41ab49d3454a83d30, type: 3}
       propertyPath: m_Name
       value: Tide3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947974307863611735, guid: bf6dc387a046edd41ab49d3454a83d30, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6207474165928461863, guid: bf6dc387a046edd41ab49d3454a83d30, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898342962685905721, guid: bf6dc387a046edd41ab49d3454a83d30, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8119518119644647754, guid: bf6dc387a046edd41ab49d3454a83d30, type: 3}
       propertyPath: m_LocalPosition.x

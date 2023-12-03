@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7433303320216118059}
   - component: {fileID: 3357574839555127760}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,9 +70,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1551096403
-  m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingLayerID: 783627301
+  m_SortingLayer: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 43614518f9f675144aa1b802b0cc3b74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3636539872621030954}
   - component: {fileID: 7970210503416375699}
   - component: {fileID: 2264409454873353759}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tide5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5023988905205831172}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}

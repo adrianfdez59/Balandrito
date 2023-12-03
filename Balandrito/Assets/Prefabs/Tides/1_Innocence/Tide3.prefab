@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8119518119644647754}
   - component: {fileID: 3121387604866369457}
   - component: {fileID: 2371077813466798562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tide3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1943319090068337758}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1677669676373107165}
   - component: {fileID: 2257449167210480286}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,9 +235,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1551096403
-  m_SortingLayer: 2
-  m_SortingOrder: 3
+  m_SortingLayerID: -1136228369
+  m_SortingLayer: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: c00629173cebcc341a10326f29521bca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

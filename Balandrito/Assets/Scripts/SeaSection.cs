@@ -4,18 +4,14 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 public class SeaSection : MonoBehaviour
-{
-    // Nombre de sección (marea): la más cercana es 0, y la más lejana 4
-    public int sectionNumber;
-
+{ 
     // Esta propiedad devuelve la anchura completa de la seccion
     public float width { get { return 32f; } }
     // Y su media anchura
     public float halfWidth { get { return width/2; } }
 
-    // Velocidad de la sección 
-    [Range(0f, 5f)]
-    public float offsetX;
+    // Velocidad y dirección a la que la marea se desplaza en X
+    private float velocityX;
     // Transform del objetivo a seguir. Es un valor por referencia, por lo que siempre dispondremos del valor actualizado
     // public Transform target;
 
@@ -32,7 +28,7 @@ public class SeaSection : MonoBehaviour
         // Recuperamos la referencia al transform de la cámara utilizando el main camera
         cameraTransform = Camera.main.transform;
 
-        //target = cameraTransform;
+        velocityX = LevelManager.instance.velocityXSections[getSectionNumber()];
     }
 
     // Update is called once per frame
@@ -49,7 +45,7 @@ public class SeaSection : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        // Si el número de filas es par y el número de columnas es par, mostraremos el gizmo en color verde. En caso contrario, en rojo
+        // Si el tamáño es 32, se muestra verde. En caso contrario, en rojo
         if (width == 32)
         {
             Gizmos.color = Color.green;
@@ -87,7 +83,7 @@ public class SeaSection : MonoBehaviour
     private void DestroySection()
     {
         // Utilizando el Singleton de SectionManager, llamamos al método de generación de una nueva sección
-        SeaSectionManager.instance.SpawnSection(sectionNumber);
+        SeaSectionManager.instance.SpawnSection(getSectionNumber());
 
         // Indicamos a la sección que se autodestruya
         Destroy(gameObject, 2f);
@@ -104,8 +100,32 @@ public class SeaSection : MonoBehaviour
         // Creo un vector de posición temporal
         Vector3 newPos = transform.position;
 
-        newPos.x = transform.position.x - (offsetX * Time.deltaTime);
+        newPos.x = transform.position.x - (velocityX * Time.deltaTime);
 
         transform.position = newPos;
+    }
+
+    /// <summary>
+    /// Extraemos la sección (marea) en base al Layer sobre el que está el objeto: la más cercana es 0, y la más lejana 4
+    /// </summary>
+    private int getSectionNumber()
+    {
+        int sectionNumber;
+        int layer = gameObject.layer;
+
+        if (layer == LayerMask.NameToLayer("Section0"))
+            sectionNumber = 0;
+        else if (layer == LayerMask.NameToLayer("Section1"))
+            sectionNumber = 1;
+        else if (layer == LayerMask.NameToLayer("Section2"))
+            sectionNumber = 2;
+        else if (layer == LayerMask.NameToLayer("Section3"))
+            sectionNumber = 3;
+        else if (layer == LayerMask.NameToLayer("Section4"))
+            sectionNumber = 4;
+        else
+            sectionNumber = -1;
+
+        return sectionNumber;
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 667311293424236443}
   - component: {fileID: 1502975144433024292}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SeaSection0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,6 +98,18 @@ PrefabInstance:
     - target: {fileID: 2700667775895096516, guid: cb6181f1e05388e4686cb312c5ac422c, type: 3}
       propertyPath: m_Name
       value: Tide1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700667775895096516, guid: cb6181f1e05388e4686cb312c5ac422c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6832440167879718267, guid: cb6181f1e05388e4686cb312c5ac422c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851383962783996061, guid: cb6181f1e05388e4686cb312c5ac422c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
