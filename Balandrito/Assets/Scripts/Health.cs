@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
+using TMPro;
 
 public class Health : MonoBehaviour
 {
@@ -11,8 +12,9 @@ public class Health : MonoBehaviour
     public Collider2D derecha;
     public bool objetoEnCollider;
     private float tiempoTranscurrido;
-    public int vida = 30;
+    public float vida = 300f;
     public Transform objetoAseguir;
+    public TextMeshProUGUI textMesh;
 
     void Start()
     {
@@ -26,6 +28,7 @@ public class Health : MonoBehaviour
         {
             Destroy(personaje);
             Debug.Log("Has perdido");
+            textMesh.text = "Has perdido, reinicia para jugar de nuevo";
         }
         if (objetoAseguir != null)
         {
@@ -37,7 +40,7 @@ public class Health : MonoBehaviour
             {
                 // Mantener la misma posición en el eje Y - 2 de altura 
                 Vector3 nuevaPosicion = transform.position;
-                nuevaPosicion.y = posicionObjetoAseguir.y - 1f;
+                nuevaPosicion.y = posicionObjetoAseguir.y - 2f;
 
                 // Asignar la nueva posición al objeto que tiene este script
                 transform.position = nuevaPosicion;
@@ -55,13 +58,14 @@ public class Health : MonoBehaviour
             tiempoTranscurrido += Time.deltaTime;
 
             // Incrementa los puntos cada medio segundo
-            if (tiempoTranscurrido >= 0.6f)
+            if (tiempoTranscurrido >= 0.1f)
             {
-                vida -= 2;
+                vida -= 0.1f;
                 tiempoTranscurrido = 0f;
                 Debug.Log("Vida: " + vida);
             }
         }
+        textMesh.text = "Vida: " + vida.ToString("0");
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -70,6 +74,16 @@ public class Health : MonoBehaviour
         if (other == izquierda || derecha)
         {
             objetoEnCollider = true;
+        }
+        if (other.gameObject.CompareTag("Rock"))
+        {
+            vida -= 100f;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.CompareTag("Bottle") && vida >=400f)
+        {
+            vida += 15f;
+            Destroy(other.gameObject);
         }
     }
 
@@ -88,11 +102,13 @@ public class Health : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Rock"))
         {
-            vida -= 20;
+            vida -= 100f;
+            Destroy(gameObject);
         }
-        if (collision.gameObject.CompareTag("Bottle"))
+        if (collision.gameObject.CompareTag("Bottle") && vida >= 400f)
         {
-            vida += 15;
+            vida += 30f;
+            Destroy(gameObject);
         }
     }
 }

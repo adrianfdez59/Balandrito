@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Puntuacion : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Puntuacion : MonoBehaviour
     private bool objetoEnCollider;
     private float tiempoTranscurrido;
     private int puntos = 0;
+    public TextMeshProUGUI textMesh;
 
     void Start()
     {
@@ -30,6 +32,7 @@ public class Puntuacion : MonoBehaviour
                 puntos += 100;
                 tiempoTranscurrido = 0f;
                 Debug.Log("Puntos: " + puntos);
+                textMesh.text = "Puntos:" + puntos.ToString("0");
             }
         }
     }

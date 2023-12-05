@@ -264,10 +264,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xBFC\xF3mo se juega?\n\nEs f\xE1cil! El barco debe estar siempre boca
-    arriba, es decir, los extremos de este no deben tocar el agua. \n\nW/S para cambiar
-    de carril; A/D para avanzar; Q/E para rotar. \n\nEl objetivo del juego es coleccionar
-    botellas para poder ir desbloqueando partes de la historia.\n\n\xA1Divi\xE9rtete!"
+  m_text: "\xBFC\xF3mo se juega?\n\nEs f\xE1cil! El barco de papel pierde vida cada
+    segundo.\n\xA1Recoge botellas con mensajes para aumentar o mantener la vida y
+    \npoder seguir jugando!\n\nW/S para cambiar de carril; A/D para avanzar; Q/E
+    para rotar, espacio para dar la vuelta al barco. \n\nObten puntos saltando las
+    olas y realizando piruetas por los aires\n\xA1Pero cuidado con las rocas!\n\n\xA1Divi\xE9rtete!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 16b4d51da2cd80d4881f1c4d62739c0e, type: 2}
   m_sharedMaterial: {fileID: -1328964859351751092, guid: 16b4d51da2cd80d4881f1c4d62739c0e, type: 2}
@@ -576,8 +577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 547528d4e49354343b1c06747db7522b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  video: {fileID: 0}
-  raw: {fileID: 0}
 --- !u!114 &599589671
 MonoBehaviour:
   m_ObjectHideFlags: 0

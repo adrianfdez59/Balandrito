@@ -101,6 +101,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4537679245216071977, guid: cb6181f1e05388e4686cb312c5ac422c, type: 3}
+      propertyPath: m_FlowMagnitude
+      value: 5.37
+      objectReference: {fileID: 0}
     - target: {fileID: 6832440167879718267, guid: cb6181f1e05388e4686cb312c5ac422c, type: 3}
       propertyPath: m_Layer
       value: 6

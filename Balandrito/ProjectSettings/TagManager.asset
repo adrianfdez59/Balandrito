@@ -9,6 +9,7 @@ TagManager:
   - sea
   - Bottle
   - Rock
+  - health
   layers:
   - Default
   - TransparentFX
